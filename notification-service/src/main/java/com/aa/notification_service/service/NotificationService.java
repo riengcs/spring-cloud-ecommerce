@@ -1,11 +1,10 @@
 package com.aa.notification_service.service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import com.aa.notification_service.entity.Notification;
 import com.aa.notification_service.repository.NotificationRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class NotificationService {
@@ -22,8 +21,8 @@ public class NotificationService {
         System.out.println("🔔 Notification sent: " + message);
     }
 
-	public List<Notification> getAll() {
-		return repository.findAll();
-	}
+    public List<Notification> getAll() {
+        return repository.findAll();
+    }
 }
 

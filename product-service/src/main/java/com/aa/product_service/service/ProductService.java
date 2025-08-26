@@ -1,12 +1,11 @@
 package com.aa.product_service.service;
 
-import java.util.List;
-import java.util.Optional;
-
-import org.springframework.stereotype.Service;
-
 import com.aa.product_service.entity.Product;
 import com.aa.product_service.repository.ProductRepository;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProductService {

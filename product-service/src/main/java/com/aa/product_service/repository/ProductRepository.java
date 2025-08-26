@@ -1,8 +1,7 @@
 package com.aa.product_service.repository;
 
-import org.springframework.data.jpa.repository.JpaRepository;
-
 import com.aa.product_service.entity.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ProductRepository extends JpaRepository<Product, Long> {
 

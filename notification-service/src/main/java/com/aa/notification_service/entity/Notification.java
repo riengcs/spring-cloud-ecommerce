@@ -1,11 +1,11 @@
 package com.aa.notification_service.entity;
 
-import java.time.LocalDateTime;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+
+import java.time.LocalDateTime;
 
 @Entity
 public class Notification {
@@ -15,49 +15,50 @@ public class Notification {
     private Long id;
 
     private String toCustomer;
-    
+
     private String message;
-    
+
     private LocalDateTime sentAt;
-    
-    public Notification() {}
 
-	public Notification(String toCustomer, String message) {
-		this.toCustomer = toCustomer;
-		this.message = message;
-		this.sentAt = LocalDateTime.now();
-	}
+    public Notification() {
+    }
 
-	public Long getId() {
-		return id;
-	}
+    public Notification(String toCustomer, String message) {
+        this.toCustomer = toCustomer;
+        this.message = message;
+        this.sentAt = LocalDateTime.now();
+    }
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    public Long getId() {
+        return id;
+    }
 
-	public String getToCustomer() {
-		return toCustomer;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setToCustomer(String toCustomer) {
-		this.toCustomer = toCustomer;
-	}
+    public String getToCustomer() {
+        return toCustomer;
+    }
 
-	public String getMessage() {
-		return message;
-	}
+    public void setToCustomer(String toCustomer) {
+        this.toCustomer = toCustomer;
+    }
 
-	public void setMessage(String message) {
-		this.message = message;
-	}
+    public String getMessage() {
+        return message;
+    }
 
-	public LocalDateTime getSentAt() {
-		return sentAt;
-	}
+    public void setMessage(String message) {
+        this.message = message;
+    }
 
-	public void setSentAt(LocalDateTime sentAt) {
-		this.sentAt = sentAt;
-	}
-    
+    public LocalDateTime getSentAt() {
+        return sentAt;
+    }
+
+    public void setSentAt(LocalDateTime sentAt) {
+        this.sentAt = sentAt;
+    }
+
 }
