@@ -3,7 +3,7 @@
 # =========================
 # Configuration
 # =========================
-DOCKER_USER="xalx1"                 # Your Docker Hub username
+DOCKER_USER="riengcs"                 # Your Docker Hub username
 VERSION="1.0.0-compose"             # Image tag/version
 SERVICES=("config-server" "discovery-server" "gateway-server" "order-service" "product-service" "notification-service")
 
