@@ -1,10 +1,10 @@
 # STAGE 1: BUILD
 FROM maven:3.9.11-eclipse-temurin-21-alpine AS builder
 WORKDIR /app
-COPY pom.xml .
 COPY mvnw .
 COPY .mvn/ .mvn/
 COPY src ./src
+COPY pom.xml .
 RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 RUN ./mvnw clean package -DskipTests
