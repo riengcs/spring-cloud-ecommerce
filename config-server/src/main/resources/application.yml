@@ -21,13 +21,14 @@ spring:
             order: 1
           - type: vault
             host: ${VAULT_HOST:localhost}
-            port: ${VAULT_HOST:8200}
+            port: ${VAULT_PORT:8200}
             scheme: http
             backend: secret
             kv-version: 2
+            authentication: TOKEN
+            token: ${VAULT_TOKEN}
+            skipSslValidation: true
             order: 2
-    vault:
-      token: ${VAULT_TOKEN}
 
 management:
   endpoints:
