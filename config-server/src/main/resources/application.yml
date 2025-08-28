@@ -16,7 +16,6 @@ spring:
             uri: https://github.com/AlexandruAlexa1/config-repo.git
             default-label: main
             order: 1
-
           - type: vault
             host: ${VAULT_HOST:localhost}
             port: ${VAULT_PORT:8200}
@@ -24,22 +23,10 @@ spring:
             order: 2
         vault:
           token: root
-
-    bus:
-      enabled: false
-      refresh:
-        enabled: false
-
     vault:
       token: root
       host: vault
       scheme: http
-
-  rabbitmq:
-    host: ${RABBITMQ_HOST:localhost}
-    port: ${RABBITMQ_PORT:5672}
-    username: ${RABBITMQ_USER:guest}
-    password: ${RABBITMQ_PASS:guest}
 
 management:
   endpoints:
@@ -47,4 +34,3 @@ management:
       exposure:
         include:
           - health
-          - bus-refresh
