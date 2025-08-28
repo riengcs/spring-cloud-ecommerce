@@ -26,6 +26,8 @@ spring:
             backend: secret
             kv-version: 2
             order: 2
+    vault:
+      token: ${VAULT_TOKEN}
 
 management:
   endpoints:
