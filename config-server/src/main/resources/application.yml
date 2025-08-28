@@ -14,19 +14,18 @@ spring:
         composite:
           - type: git
             uri: https://github.com/AlexandruAlexa1/config-repo.git
+            username: ${GIT_USERNAME}
+            password: ${GIT_PASSWORD}
+            cloneOnStart: true
             default-label: main
             order: 1
           - type: vault
             host: ${VAULT_HOST:localhost}
-            port: ${VAULT_PORT:8200}
+            port: ${VAULT_HOST:8200}
+            scheme: http
+            backend: secret
             kv-version: 2
             order: 2
-        vault:
-          token: root
-    vault:
-      token: root
-      host: vault
-      scheme: http
 
 management:
   endpoints:
