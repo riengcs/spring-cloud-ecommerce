@@ -9,7 +9,7 @@ RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 RUN ./mvnw clean package -DskipTests
 
-# STAGE 1: RUN
+# STAGE 2: RUN
 FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
